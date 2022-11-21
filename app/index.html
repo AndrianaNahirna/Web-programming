@@ -4,9 +4,368 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <title>Document</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
 </head>
+
 <body>
+
+
+  <div class="content">
+          
+    <nav class="navbar bg-light">            
+            <div class="container-fluid">              
+              <div id="navbar-brand">                
+                <input id="menu" type="image" src="img/Menu.svg" height="15" width="22"> 
+                <div id="text">Dashboard</div>
+              </div>              
+              <a class="navbar-logo" href="#">
+                <img src="img/Logo.svg" alt="Logo" width="114" height="30" class="img-logo align-text-top">
+              </a>
+            </div>            
+    </nav>
+
+    <div class="list-group" id="announcement">
+            <div class="announcement-header" >
+              <button type="button" class="list-group-item list-group-item-action" id="button0" disabled>
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Announcement </h5>                  
+                </div>
+                <div class="pr">From your Principal or Teachers</div>                 
+                <div class="principal">Principal</div>
+                <div class="teacher">Teacher</div>               
+              </button>              
+            </div>
+              
+            <div class="announcement">              
+              <button type="button" class="list-group-item list-group-item-action" id="button1">
+                <div id="view-1">
+                  <div class="view1" ></div>
+                  <input class="view" type="image" src="img/view.svg" height="12" width="18">
+                </div>
+                <div class="announ-1">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">MERRY CHRISTMAS EVERYONE AND DAYS OFF SCHEDULE </h5>                  
+                  </div>
+                  <p class="mb-1">Thank you everyone for all of your supports. Please notice days off schedule ...</p> 
+                </div>               
+              </button>
+              <button type="button" class="list-group-item list-group-item-action" id="button2">
+                <div id="view-2">
+                  <div class="view2"></div>
+                  <input class="view" type="image" src="img/view.svg" height="12" width="18">
+                </div>
+                <div class="announ-2">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">HISTORY OF EARTH ASSIGNMENT DETAILS</h5>                  
+                  </div>
+                  <p class="mb-1">Hello Student, remember we have a small assignment before Christmas break ...</p>                
+                </div>
+              </button>
+              <button type="button" class="list-group-item list-group-item-action" id="button3">
+                <div id="view-3">
+                  <div class="view3"></div>
+                  <input class="view" type="image" src="img/view.svg" height="12" width="18">
+                </div>
+                <div class="announ-3">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Introduction to Geography Test WILL BE MOVED TO NOV 27TH</h5>                  
+                  </div>
+                  <p class="mb-1">Sorry for the delay but I have some problem with the test which mean ...</p>  
+                </div>              
+              </button>
+              <button type="button" class="list-group-item list-group-item-action" id="button4">    
+                <div class="announ-3">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1"></h5>                  
+                  </div>
+                  <p class="mb-1"></p>  
+                </div>        
+              </button>
+            </div>
+    </div>            
+
+    <div id="messages">
+
+              <div class="plus" id="plus-mess">
+                <input id="plus" type="image" src="img/ic_add.svg" height="11" width="12" >
+              </div>
+      
+              <ul class="list-group" >
+                <li class="list-group-item" id="mess0"> 
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Messages</h5>                  
+                  </div>
+                  <div class="mes">Current Conversations</div> 
+                </li>
+                <li class="list-group-item" id="mess1">                  
+                  <div class="user-icon online">
+                    <img src="img/ava1.svg">
+                  </div>
+                  <div class="mess-1">                  
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Mr. Sheldon Cooper</h5>                  
+                    </div>
+                    <p class="mb-1">What is wrong with your homework?</p>               
+                    <small>Just now</small>
+                  </div>                
+                </li>
+                <li class="list-group-item" id="mess2">
+                  <div class="user-icon offline">
+                    <img src="img/ava2.svg">
+                  </div>
+                  <div class="mess-2">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Jason Bourne</h5>                  
+                    </div>
+                    <p class="mb-1">Hey dude ! What's the plan ?</p> 
+                    <small>2 hours ago</small>                                            
+                  </div>
+                </li>
+                <li class="list-group-item" id="mess3">
+                  <div class="user-icon online">
+                    <img src="img/ava3.svg">
+                  </div>
+                  <div class="mess-3">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Mr. Barney Stinson</h5>                  
+                    </div>
+                    <p class="mb-1">Have you tried my formula ?</p>             
+                    <small>1 day ago</small>
+                  </div>        
+                </li>
+                <li class="list-group-item" id="mess4">
+                  <div class="user-icon online">
+                    <img src="img/ava4.svg">
+                  </div>
+                  <div class="mess-4">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Jesse Pinkman</h5>                  
+                    </div>
+                    <p class="mb-1">I finished it 2 days ago</p> 
+                    <small>1 day ago</small>              
+                  </div>       
+                </li>
+              </ul>
+    </div>
+          
+    <div id="courses">
+
+        <div class="plus">
+          <input id="plus" type="image" src="img/ic_add.svg" height="11" width="12" >
+        </div>
+
+        <ul class="list-group" >
+          <li class="list-group-item" id="course0"> 
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Courses</h5>                  
+            </div>
+            <div class="course">Your Current Courses And Process</div> 
+          </li>
+          <li class="list-group-item" id="course1">
+            <div class="box">
+              <div class="skill">
+                <div class="graph" style="height:100%">
+                  <div class="percent">100%</div>
+                </div>
+              </div>
+            </div>
+            <div class="course-1">                  
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">History of the Earth</h5>                  
+              </div>
+              <p class="mb-1">Teacher : Mr.Jason Bourne</p>               
+            </div>
+          </li>
+          <li class="list-group-item" id="course2">
+            <div class="box">
+              <div class="skill">
+                <div class="graph" style="height:70%">
+                  <div class="percent">70%</div>
+                </div>
+              </div>
+            </div>
+            <div class="course-2">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Introduction to Geography</h5>                  
+              </div>
+              <p class="mb-1">Teacher : Mr.Barney Stinson</p>                          
+            </div>
+          </li>
+          <li class="list-group-item" id="course3">
+            <div class="box">
+              <div class="skill">
+                <div class="graph" style="height:55%">
+                  <div class="percent">55%</div>
+                </div>
+              </div>
+            </div>
+            <div class="course-3">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Math Formative Assessment</h5>                  
+              </div>
+              <p class="mb-1">Teacher : Ms.Charlie Theron</p>             
+            </div>        
+          </li>
+          <li class="list-group-item" id="course4">
+            <div class="box">
+              <div class="skill">
+                <div class="graph" style="height:20%">
+                  <div class="percent">20%</div>
+                </div>
+              </div>
+            </div>
+            <div class="course-4">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">The Special Theory of Relativity</h5>                  
+              </div>
+              <p class="mb-1">Teacher : Mr.Matt Damon</p>               
+            </div>       
+          </li>
+        </ul>
+    </div>
+
+    <div class="wrapper">
+          <div class="plus" id="plus-2">
+            <input id="plus" type="image" src="img/ic_add.svg" height="11" width="12" >
+           </div>
+
+          <header>
+            <p class="current-date"></p>
+            <div class="icons">
+              <span class="material-symbols-outlined">arrow_drop_down</span>
+            </div>
+          </header>
+
+          <div class="calendar">
+            <ul class="weeks">
+              <li>M</li>
+              <li>T</li>
+              <li>W</li>
+              <li>T</li>
+              <li>F</li>
+              <li>S</li>
+              <li>S</li>              
+            </ul>
+            <ul class="days"></ul>            
+          </div>
+    </div>
+
+    <section class="timeline-section">
+          <div class="timeline-items">
+
+            <div class="timeline-item">
+              <div class="timeline-dot" id="dot-blue"></div>
+              <div class="timeline-date" id="date-blue">
+                <div class="date-month">11</div>
+                <div class="date-day">14</div>
+              </div>
+              <div class="timeline-content">
+                <p class="event">History of the Earth Assignment</p>
+                <p class="hour">09h30’</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot" id="dot-yellow"></div>
+              <div class="timeline-date" id="date-yellow">
+                <div class="date-month">11</div>
+                <div class="date-day">27</div>
+              </div>
+              <div class="timeline-content">
+                <p class="event">Introduction to Geography Test </p>
+                <p class="hour">09h30’</p>
+                <hr>
+              </div>                              
+            </div>
+
+            <div class="timeline-item" id="timeline-item-2">                               
+              <div class="timeline-date"></div>              
+              <div class="timeline-content">                
+                <p class="event">Math Formative Assessment Test </p>
+                <p class="hour">14h30’</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot" id="dot-blue"></div>
+              <div class="timeline-date" id="date-blue">
+                <div class="date-month">11</div>
+                <div class="date-day">29</div>
+              </div>
+              <div class="timeline-content">
+                <p class="event">History of the Earth Final Test</p>
+                <p class="hour">15h45’</p>
+              </div>
+            </div>
+          </div>
+    </section>
     
+    <div class="main-container d-flex">
+      
+      <div class="sidebar" id="side_nav">
+
+        <div class="header-box  pt-3 pb-4">  
+          <div class="ava">
+              <img src="img/ava.png" alt="..." width="70" height="70">
+          </div>      
+          <p class="user-name">Alex Shaw</p>
+          <p class="location"><i class="fa-sharp fa-solid fa-location-dot"></i> Ho Chi Minh City, Vietnam</p>
+          <span class="student">Student</span>
+        </div>
+
+        <div id="main-nav">
+          <ul class="list-unstyled">
+            <li class="active">
+              <img src="img/Dashboard.svg" alt="..." width="25" height="21" id="icon">
+              <a href="#" class="text-decoration-none px-3 py-2 d-block">Dashboard</a>
+            </li>
+            <li class="">
+              <img src="img/Calendar.svg" alt="..." width="25" height="22" id="icon">
+              <a href="#" class="text-decoration-none px-3 py-2 d-block">Calendar</a>
+            </li>
+            <li class="">
+              <img src="img/Announcement.svg" alt="..." width="25" height="25" id="icon">
+              <a href="#" class="text-decoration-none px-3 py-2 d-block">Announcement</a>
+            </li>
+            <li class="">
+              <img src="img/Courses.svg" alt="..." width="23" height="25" id="icon">
+              <a href="#" class="text-decoration-none px-3 py-2 d-block">Courses</a>
+            </li>
+            <li class="">
+              <img src="img/Messages.svg" alt="..." width="25" height="20" id="icon">
+              <a href="#" class="text-decoration-none px-3 py-2 d-block">Messages</a>
+            </li>
+            <li class="">
+              <img src="img/Forum.svg" alt="..." width="25" height="25" id="icon">
+              <a href="#" class="text-decoration-none px-3 py-2 d-block">Forum</a>
+            </li>
+          </ul>      
+        </div> 
+
+      </div>
+
+      <div class="settings">
+        <input id="settings" type="image" src="img/Settings.svg" height="26" width="25">
+        <input id="logout" type="image" src="img/LogOut.svg" height="27" width="20">
+      </div>      
+    </div>
+
+  </div>
+      
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/file.js"></script>
+
 </body>
 </html>

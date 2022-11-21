@@ -20,7 +20,7 @@ function browsersync() {
 
 function task_html () {
     return src ( 'app/*.html')
-    .pipe (dest ( 'dist'));
+    .pipe (dest('dist'));
    }
 
 
@@ -34,9 +34,14 @@ function task_sass () {
     }))
     .pipe (cssnano ())
     .pipe (rename ({suffix: '.min'}))
-    .pipe (dest ( 'dist/css'));
+    .pipe (dest('dist/css'));
    }   
-   
+function task_css () {
+    return src ( 'app/css/*.css')
+    .pipe (concat ( 'style.css'))
+    .pipe (rename ({suffix: '.min'}))
+    .pipe (dest('dist/css'));
+   }
 
 function task_scripts() {
     return src('app/js/*.js')
@@ -47,13 +52,13 @@ function task_scripts() {
 }
 
 function task_imgs() {
-    return src ( "app/img/*.+(jpg|jpeg|png|gif)")
+    return src ( "app/img/*.+(jpg|jpeg|png|svg)")
     .pipe (imagemin ({
     progressive: true,
     svgoPlugins: [{removeViewBox: false}],
     interlaced: true
     }))
-    .pipe (dest ("dist/images"))
+    .pipe (dest('dist/images'))
    }
    
 
@@ -62,13 +67,15 @@ function task_watch() {
     watch ("app/js/*.js", task_scripts);
     watch ("app/sass/*.sass", task_sass);
     watch ("app/images/*.+(jpg|jpeg|png|gif)", task_imgs);
+    watch ("app/**/*.html").on("change", browserSync.reload);
 }
 
 exports.browsersync = browsersync;
 exports.html = task_html;
 exports.sass = task_sass;
+exports.css = task_css;
 exports.scripts = task_scripts;
 exports.imgs = task_imgs;
 exports.watch = task_watch;
-exports.build = series(task_html, task_sass, task_scripts, task_imgs);
+exports.build = series(task_html, task_sass, task_css, task_scripts, task_imgs);
 exports.default = parallel(series(exports.build, browsersync), task_watch);
